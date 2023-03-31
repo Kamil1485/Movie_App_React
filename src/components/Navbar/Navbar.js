@@ -3,11 +3,11 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import Loading from "../Loading/Loading";
 import { LoadingContext } from "../../App";
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false);
   const [activePage, setActivePage] = useState("Trending");
+  // eslint-disable-next-line no-unused-vars
   const{loading,setLoading}=useContext(LoadingContext);
 
   const handleActivePage = (type) => {//tüm sayfa yükleme işlemleri  default:400ms içinde gerceklesiyor 

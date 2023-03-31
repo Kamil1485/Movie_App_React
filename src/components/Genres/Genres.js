@@ -24,6 +24,7 @@ const Genres = ({
     if (newGenres) {
       setGenres(newGenres);
     } 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   
