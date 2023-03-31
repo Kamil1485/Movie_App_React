@@ -1,0 +1,33 @@
+.listItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listItem {
+  cursor: pointer;
+  width: 45px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin: 4px 4px;
+  background: #2d313a;
+}
+.listItem:hover {
+  background: #495367;
+}
+.prevBtn {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nextBtn {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+.activePaginate{
+  color:yellow;
+}

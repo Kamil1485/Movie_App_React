@@ -1,0 +1,120 @@
+.search_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_input {
+  width: 50%;
+  height: 45px;
+  border-radius: 4px 4px;
+  padding: 2px;
+  font-size: 30px;
+}
+.search_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 28px; /* istediğiniz boyuta göre değiştirin */
+  margin-left: 4px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.search_btn svg {
+  width: 40px; /* istediğiniz boyuta göre değiştirin */
+  height: 45px; /* istediğiniz boyuta göre değiştirin */
+  background: white;
+  border-radius: 4px 4px;
+}
+
+.search_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 100px;
+  margin-bottom: 10px;
+}
+
+.search_movie {
+  color: white;
+  font-size: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.search_tv {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 5px solid green;
+  transition: 0.1s;
+}
+.error_message {
+  position: absolute;
+  color: white;
+  background: red;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 75%;
+  margin-bottom: 5%;
+}
+.filter_btn {
+  margin-left: 4px;
+  cursor: pointer;
+  transition: 0.8s;
+  background: yellow;
+  height: 42px;
+}
+.filter_btn svg {
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 40px;
+  height: 32px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-container > span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.filter-container button {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background-color: #ccc;
+}
+
+select {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+select option:checked {
+  color: purple;
+}

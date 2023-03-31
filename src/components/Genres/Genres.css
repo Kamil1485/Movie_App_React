@@ -1,0 +1,46 @@
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.genre_container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  color: white;
+  cursor: pointer;
+  
+  width: 150px;
+  height:50px;
+  background:#3455db;
+  border-radius: 5px 5px;
+  text-align: center;
+  margin: 4px;
+  font-size:17px;
+  border:1px solid;
+}
+.genre_container.selected {
+  display:none;
+}
+
+.genre_container:hover {
+  color: purprle;
+}
+
+.genre_btn {
+  color: white;
+  cursor: pointer;
+}
+.genre_btn:hover {
+  color: #e5c33d;
+}
+
+.btn_remove {
+  color: red;
+}
+
+.remove_icon {
+  color: red;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

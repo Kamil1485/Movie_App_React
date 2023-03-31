@@ -1,0 +1,82 @@
+.singleCard {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 600px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.singleCard:hover {
+  border: 5px solid white;
+  border-bottom: 8px solid green;
+  transform: scale(1.02);
+}
+.wrapper img {
+  width: 100%;
+}
+
+.movie__name {
+  padding: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d6a324;
+}
+
+.movie__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.vote {
+  position: absolute;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 2px;
+  font-weight:bold;
+}
+.vote.high {
+  color: #1ff22d;
+}
+.vote.mid {
+  color: #fcb320;
+}
+.vote.low {
+  color: #e51414;
+}
+.vote:hover {
+  color: white;
+  transform: scale(1.1);
+  opacity:1;
+}
+
+@media (max-width: 550px) {
+  .wrapper__image {
+    width: 100%;
+    background: red;
+  }
+  .singleCard {
+    width: 100%;
+  }
+}
+
+.active_vote {
+  display: none;
+  background: red;
+}
+
+.media_link {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+}
+.link {
+  color: orange;
+}
+.link:hover {
+  color: orange;
+}
