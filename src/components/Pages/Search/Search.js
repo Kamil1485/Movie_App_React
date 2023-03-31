@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Search.css";
 import axios from "axios";
 import SingleCard from "../Trending/SingleCard";
@@ -15,29 +15,31 @@ const Search = () => {
   const [searched, setSearched] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
   const [showError, setShowError] = useState(false);
-  const {loading,setLoading}=useContext(LoadingContext)
+  const { loading, setLoading } = useContext(LoadingContext);
   const [movieFilter, setMovieFilter] = useState(
     () =>
       JSON.parse(localStorage.getItem("movieFilter")) || {
         release_date: "",
-        language: "tr",
+        language: "",
         vote_average: null,
-        searchedData:""
+        searchedData: "",
       }
   );
   useEffect(() => {
     localStorage.setItem("movieFilter", JSON.stringify(movieFilter));
   }, [movieFilter]);
- // console.log(movieFilter.language);
-  console.log(searched)
+  // console.log(movieFilter.language);
+  // console.log(searched)
   const fetchSearch = async () => {
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/search/${
-          type === "movie" ? "movie" : "tv" 
+          type === "movie" ? "movie" : "tv"
         }?api_key=bf7b9eabb49e072d0c8f00d1a5542e14&language=${
           movieFilter.language
-        }&query=${movieFilter.searchedData}&page=${page}&include_adult=false&primary_release_year=${
+        }&query=${
+          movieFilter.searchedData
+        }&page=${page}&include_adult=false&primary_release_year=${
           movieFilter.release_date
         }`
       );
@@ -50,7 +52,6 @@ const Search = () => {
       console.error(error);
     }
   };
-
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -91,7 +92,13 @@ const Search = () => {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button type="submit" onClick={()=>setMovieFilter({...movieFilter,searchedData:searchText})} className="search_btn">
+          <button
+            type="submit"
+            onClick={() =>
+              setMovieFilter({ ...movieFilter, searchedData: searchText })
+            }
+            className="search_btn"
+          >
             {<GrSearch />}
           </button>
           {showError && (
@@ -143,10 +150,14 @@ const Search = () => {
           <span>Imdb</span>
           <select
             onClick={(e) =>
-               setMovieFilter({ ...movieFilter, vote_average: e.target.value })
+              setMovieFilter({ ...movieFilter, vote_average: e.target.value })
             }
           >
-            <option value="">{movieFilter.vote_average ? movieFilter.vote_average+" and above":"All" }</option>
+            <option value="">
+              {movieFilter.vote_average
+                ? movieFilter.vote_average + " and above"
+                : "All"}
+            </option>
             <option value="9">9 and above</option>
             <option value="8">8 and above</option>
             <option value="7">7 and above</option>
@@ -203,7 +214,7 @@ const Search = () => {
                 numOfPages={numOfPages}
                 setPage={setPage}
                 setLoading={setLoading}
-               mediaType={"search"}
+                mediaType={"search"}
               />
             </div>
           )}
