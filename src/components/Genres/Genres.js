@@ -28,7 +28,7 @@ const Genres = ({
   
   
 
-console.log(genres)
+//console.log(genres)
 
 const handleAdd = (genre) => {
   const newSelectedGenres = [...selectedGenres, genre];
@@ -68,7 +68,7 @@ const handleRemove = (genre) => {
     fetchGenres();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
-  console.log(genres)
+  //console.log(genres)
   return (
     <div>
       <h2>Select Genres</h2>

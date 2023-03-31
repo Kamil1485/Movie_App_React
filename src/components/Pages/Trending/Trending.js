@@ -23,7 +23,7 @@ const Trending = () => {
       setLoading(false);
     }, 500);
   };
-console.log(loading)
+//console.log(loading)
   useEffect(() => {
     fetchTrending();
   // eslint-disable-next-line react-hooks/exhaustive-deps
