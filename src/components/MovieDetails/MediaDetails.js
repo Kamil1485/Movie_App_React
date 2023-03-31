@@ -16,7 +16,7 @@ const MediaDetails = (props) => {
   const [reviews, setReviews] = useState([]);
   const { id } = useParams(); //movieId
   const { loading, setLoading } = useContext(LoadingContext);
-  console.log(loading);
+  //console.log(loading);
   const fetchData = async () => {
     setLoading(true);
     const { data } = await axios.get(
@@ -46,7 +46,7 @@ const MediaDetails = (props) => {
         props.mediaType
       }/${id}/videos?api_key=${"bf7b9eabb49e072d0c8f00d1a5542e14"}&language=en-US`
     );
-    console.log(data);
+    //console.log(data);
     if (data.results.length > 0) {
       const videoId = data.results[0]?.key;
       const embedUrl = `https://www.youtube.com/embed/${videoId}`;

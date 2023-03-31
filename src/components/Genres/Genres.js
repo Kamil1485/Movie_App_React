@@ -17,7 +17,7 @@ const Genres = ({
     
     const storedGenres = JSON.parse(localStorage.getItem('selectedGenres'));
     const newGenres = JSON.parse(localStorage.getItem('genres'));
-    console.log(newGenres);
+   // console.log(newGenres);
     if (storedGenres) {
       setSelectedGenres(storedGenres);
     } 

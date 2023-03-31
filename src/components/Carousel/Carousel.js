@@ -60,7 +60,7 @@ const Gallery = ({ mediaType, id }) => {
     // eslint-disable-next-line
   }, [id]);
   //console.log(credits);
-  console.log(credits)
+ // console.log(credits)
   return (
     <div>
    
