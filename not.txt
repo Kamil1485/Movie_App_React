@@ -1,7 +1,0 @@
-console source(kaynaklar) bölümüne gir
-C:\Users\efsan\Desktop\ReactYeni\10Mart\movieapps\src bölümüne gir
-sayfa yüklenir yüklenmez tüm componentler yüklü
-lazy işlem ile ihtiyaç oldugunda yükleme işlemi browser a 
-farkı görmek için Ağ bölümünden  internet bağlantısı hızını kısıtlama, yavaş 3G veya hızlı 3G yaparak movies bölümünde yüklenirken loading... yazısı gözükür.
-
-son yapılan işlem loadingContext tüm sayfalarda loading,setlaodingleri temizle context ile alınacak
